@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register</title>
+  <link rel="stylesheet" href="auth.css">
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Register Form -->
+    <div id="registerForm" class="form-box">
+      <h2>Create Account</h2>
+      <input type="text" id="regName" placeholder="First Name">
+      <input type="text" id="regSurname" placeholder="Last Name">
+      <input type="email" id="regEmail" placeholder="Email">
+      <input type="password" id="regPassword" placeholder="Password">
+      <button onclick="registerUser()">Sign Up</button>
+      <p>Already have an account? <a href="#" onclick="toggleForm('login')">Login here</a></p>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginForm" class="form-box hidden">
+      <h2>Welcome Back</h2>
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button onclick="loginUser()">Login</button>
+      <p>Don’t have an account? <a href="#" onclick="toggleForm('register')">Sign up here</a></p>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
